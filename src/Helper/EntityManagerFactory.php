@@ -11,11 +11,14 @@ class EntityManagerFactory
 {
   public function getEntityManager()
   {
+    // configurações do doctrine
     $rootDir = __DIR__ . '/../..';
     $config = Setup::createAnnotationMetadataConfiguration(
         [$rootDir . '/src'],
         true
     );
+
+    // configurações de conexao
     $connection = [
         'driver' => 'pdo_sqlite',
         'path' => $rootDir . '/var/data/banco.sqlite'

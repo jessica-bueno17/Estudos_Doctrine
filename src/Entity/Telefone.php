@@ -19,7 +19,7 @@ namespace Alura\Doctrine\Entity;
      */
     private $numero;
     /**
-     * @ManyToOne(TargetEntity="Aluno")
+     * @ManyToOne(targetEntity="Aluno", inversedBy="cursos")
      */
     private $aluno;
 
